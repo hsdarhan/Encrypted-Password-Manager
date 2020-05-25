@@ -1,13 +1,15 @@
 import base64
-import os
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 salt=b'yp\x98\xa5\x1a\xcb\xe8\xd2%\xfcM\x14\xd1<!\x99'
-from cryptography.fernet import Fernet
 
 def create_account():
+    """
+    Creates an account for the user by hashing the password (SHA-512)
+    :return:
+    """
     match=False
     while(match==False):
         provided_password=input("Enter a password for this account: ")
@@ -30,8 +32,3 @@ def create_account():
     file.write(hashed_password)
     file.close()
 
-
-
-
-if __name__ == '__main__':
-    create_account()
