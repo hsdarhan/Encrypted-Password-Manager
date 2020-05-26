@@ -13,7 +13,7 @@ def createDB():
         conn= psycopg2.connect(**params)
         conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
         cur=conn.cursor()
-        cur.execute("CREATE DATABASE FIRST")
+        cur.execute("CREATE DATABASE PASSWORDMANAGER")
         cur.close()
 
         conn.commit()

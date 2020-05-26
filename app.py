@@ -79,10 +79,12 @@ def getInfo(key):
     encrypted_password=cipher.encrypt(encoded_password)
     storage_password=encrypted_password.decode()
 
-    dict={"Service":source,"User":storage_user, "Password":storage_password}
+    block={"Service":source,"User":storage_user, "Password":storage_password}
+    print("Encrypting...")
     print(source, storage_user, storage_password)
+    print("Successfully stored!")
 
-    return dict
+    return block
 
 def store(info):
     """
