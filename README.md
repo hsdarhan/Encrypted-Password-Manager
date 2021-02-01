@@ -1,4 +1,4 @@
-# Encrypted Password Manager
+# PassLock
 
 This is a local password manager that stores encrypted usernames and passwords in PostgreSQL.
 Fields are encrypted using the AES-256 encryption standard, and user authentication is provided with SHA-512
